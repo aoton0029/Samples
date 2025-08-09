@@ -1,4 +1,4 @@
-namespace Samples
+namespace FileSample
 {
     internal static class Program
     {
@@ -10,7 +10,6 @@ namespace Samples
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
-            System.IO.Directory.SetCurrentDirectory(AppDomain.CurrentDomain.BaseDirectory);
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
         }

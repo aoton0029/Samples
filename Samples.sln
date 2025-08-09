@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PermissionSample", "Permiss
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectSample", "ProjectSample\ProjectSample.csproj", "{B964BABB-4C5E-48FE-89F8-93DFBD41FF87}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSample", "FileSample\FileSample.csproj", "{D338F5E9-A6D5-4030-87B3-0F92222B7CB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{B964BABB-4C5E-48FE-89F8-93DFBD41FF87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B964BABB-4C5E-48FE-89F8-93DFBD41FF87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B964BABB-4C5E-48FE-89F8-93DFBD41FF87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D338F5E9-A6D5-4030-87B3-0F92222B7CB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D338F5E9-A6D5-4030-87B3-0F92222B7CB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D338F5E9-A6D5-4030-87B3-0F92222B7CB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D338F5E9-A6D5-4030-87B3-0F92222B7CB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
