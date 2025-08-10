@@ -28,69 +28,69 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtUserId = new TextBox();
+            txtDesc = new TextBox();
             button1 = new Button();
-            button2 = new Button();
-            textBox3 = new TextBox();
+            btnLoad = new Button();
+            txtLoaded = new TextBox();
             SuspendLayout();
             // 
-            // textBox1
+            // txtUserId
             // 
-            textBox1.Font = new Font("メイリオ", 12F);
-            textBox1.Location = new Point(48, 30);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(129, 31);
-            textBox1.TabIndex = 0;
+            txtUserId.Font = new Font("メイリオ", 12F);
+            txtUserId.Location = new Point(48, 30);
+            txtUserId.Name = "txtUserId";
+            txtUserId.Size = new Size(129, 31);
+            txtUserId.TabIndex = 0;
             // 
-            // textBox2
+            // txtDesc
             // 
-            textBox2.Font = new Font("メイリオ", 12F);
-            textBox2.Location = new Point(48, 59);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(378, 75);
-            textBox2.TabIndex = 1;
+            txtDesc.Font = new Font("メイリオ", 12F);
+            txtDesc.Location = new Point(48, 67);
+            txtDesc.Multiline = true;
+            txtDesc.Name = "txtDesc";
+            txtDesc.Size = new Size(378, 75);
+            txtDesc.TabIndex = 1;
             // 
             // button1
             // 
-            button1.Location = new Point(48, 140);
+            button1.Location = new Point(48, 148);
             button1.Name = "button1";
             button1.Size = new Size(169, 38);
             button1.TabIndex = 2;
             button1.Text = "save";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.Click += btnSave_Click;
             // 
-            // button2
+            // btnLoad
             // 
-            button2.Location = new Point(448, 15);
-            button2.Name = "button2";
-            button2.Size = new Size(169, 38);
-            button2.TabIndex = 3;
-            button2.Text = "load";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            btnLoad.Location = new Point(448, 15);
+            btnLoad.Name = "btnLoad";
+            btnLoad.Size = new Size(169, 38);
+            btnLoad.TabIndex = 3;
+            btnLoad.Text = "load";
+            btnLoad.UseVisualStyleBackColor = true;
+            btnLoad.Click += btnLoad_Click;
             // 
-            // textBox3
+            // txtLoaded
             // 
-            textBox3.Font = new Font("メイリオ", 12F);
-            textBox3.Location = new Point(448, 59);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(327, 328);
-            textBox3.TabIndex = 4;
+            txtLoaded.Font = new Font("メイリオ", 12F);
+            txtLoaded.Location = new Point(448, 59);
+            txtLoaded.Multiline = true;
+            txtLoaded.Name = "txtLoaded";
+            txtLoaded.Size = new Size(327, 328);
+            txtLoaded.TabIndex = 4;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 396);
-            Controls.Add(textBox3);
-            Controls.Add(button2);
+            Controls.Add(txtLoaded);
+            Controls.Add(btnLoad);
             Controls.Add(button1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtDesc);
+            Controls.Add(txtUserId);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -99,10 +99,10 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtUserId;
+        private TextBox txtDesc;
         private Button button1;
-        private Button button2;
-        private TextBox textBox3;
+        private Button btnLoad;
+        private TextBox txtLoaded;
     }
 }

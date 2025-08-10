@@ -1,30 +1,56 @@
+using CoreLib.Merges;
 using CoreLib.Services;
+using System.Diagnostics;
 using System.Threading.Tasks;
 
 namespace FileSample
 {
     public partial class Form1 : Form
     {
-        JsonFileManager<ImprovementRequest> ImprovementService;
+        JsonFileService<ImprovementRequest> _service;
         public Form1()
         {
             InitializeComponent();
-            ImprovementService = new JsonFileManager<ImprovementRequest>("improvementRequests.json");
+            _service = new JsonFileService<ImprovementRequest>();
         }
 
-        private async void button1_Click(object sender, EventArgs e)
+        private async void btnLoad_Click(object sender, EventArgs e)
         {
-            await ImprovementService.Save(new List<ImprovementRequest>
+            try
             {
-                new ImprovementRequest(textBox1.Text, textBox2.Text),
-                new ImprovementRequest("user2", "Add dark mode support")
-            }, textBox1.Text);
+                var (result, model) = await _service.ReadModelAsync("—v–].json");
+                txtLoaded.Text = model?.ToString() ?? "No data loaded.";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private async void button2_Click(object sender, EventArgs e)
+        private async void btnSave_Click(object sender, EventArgs e)
         {
-            string content = await ImprovementService.Load(textBox1.Text);
-            textBox3.Text = content;
+            try
+            {
+                var result = await _service.SaveModelWithSessionAsync(
+                    "—v–].json"
+                    , new ImprovementRequest(txtUserId.Text, txtDesc.Text)
+                    , txtUserId.Text
+                    , ConflictResolutionStrategy.AutoMerge);
+
+                if (!result.Success || result.ConflictInfo != null)
+                {
+                    Debug.Print(result.Model?.ToString());
+                    Debug.Print(result.ConflictInfo?.ToString());
+                }
+                else
+                {
+                    Debug.Print("Save successful.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
