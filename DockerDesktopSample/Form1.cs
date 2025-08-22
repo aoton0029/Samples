@@ -11,8 +11,10 @@ namespace DockerDesktopSample
         public Form1()
         {
             InitializeComponent();
-            ucPageContainer = new UcPageContainer();
+            ucPageContainer = new UcPageContainer(dockerWslExecutor);
             ucPageImages = new UcPageImages();
+
+            changePages(ucPageContainer);
         }
 
         private void changePages(UserControl page)
@@ -38,11 +40,6 @@ namespace DockerDesktopSample
                         break;
                 }
             }
-        }
-
-        private async void button1_Click(object sender, EventArgs e)
-        {
-            await DockerWslUsageExample.Main(new string[]{ });
         }
     }
 }

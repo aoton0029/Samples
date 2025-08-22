@@ -90,13 +90,18 @@
             // 
             // button1
             // 
-            button1.Location = new Point(26, 180);
+            button1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("メイリオ", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 128);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(-1, 529);
+            button1.Margin = new Padding(0);
             button1.Name = "button1";
-            button1.Size = new Size(81, 23);
+            button1.Size = new Size(164, 44);
             button1.TabIndex = 2;
-            button1.Text = "button1";
+            button1.Text = "Settings";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // Form1
             // 

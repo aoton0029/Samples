@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CoreLib.Cmds;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,18 @@ namespace DockerDesktopSample
 {
     public partial class UcPageContainer : UserControl
     {
-        public UcPageContainer()
+        private readonly DockerWslExecutor _dockerWslExecutor;
+
+        public UcPageContainer(DockerWslExecutor executor)
         {
             InitializeComponent();
+            _dockerWslExecutor = executor;
+        }
+
+        private async void btnReload_Click(object sender, EventArgs e)
+        {
+            var containers = await _dockerWslExecutor.GetContainersAsync(true);
+            grid.DataSource = containers;
         }
     }
 }

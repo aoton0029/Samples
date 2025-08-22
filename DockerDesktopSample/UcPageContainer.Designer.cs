@@ -43,6 +43,7 @@
             btnReload.TabIndex = 3;
             btnReload.Text = "更新";
             btnReload.UseVisualStyleBackColor = true;
+            btnReload.Click += btnReload_Click;
             // 
             // grid
             // 
