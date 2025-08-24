@@ -24,7 +24,6 @@ namespace DockerDesktopSample
         private async void btnReload_Click(object sender, EventArgs e)
         {
             var containers = await _dockerWslExecutor.GetContainersAsync(true);
-            grid.DataSource = containers;
         }
     }
 }

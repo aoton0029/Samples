@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             btnReload = new Button();
-            grid = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)grid).BeginInit();
+            flp = new FlowLayoutPanel();
             SuspendLayout();
             // 
             // btnReload
             // 
             btnReload.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnReload.Font = new Font("メイリオ", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 128);
-            btnReload.Location = new Point(660, 6);
+            btnReload.Location = new Point(665, 6);
             btnReload.Name = "btnReload";
             btnReload.Size = new Size(95, 33);
             btnReload.TabIndex = 3;
@@ -45,30 +44,27 @@
             btnReload.UseVisualStyleBackColor = true;
             btnReload.Click += btnReload_Click;
             // 
-            // grid
+            // flp
             // 
-            grid.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            grid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grid.Location = new Point(8, 44);
-            grid.Name = "grid";
-            grid.Size = new Size(747, 510);
-            grid.TabIndex = 2;
+            flp.Location = new Point(3, 45);
+            flp.Name = "flp";
+            flp.Size = new Size(757, 512);
+            flp.TabIndex = 4;
             // 
             // UcPageContainer
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(flp);
             Controls.Add(btnReload);
-            Controls.Add(grid);
             Name = "UcPageContainer";
             Size = new Size(763, 560);
-            ((System.ComponentModel.ISupportInitialize)grid).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Button btnReload;
-        private DataGridView grid;
+        private FlowLayoutPanel flp;
     }
 }
